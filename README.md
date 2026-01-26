@@ -26,8 +26,8 @@ A full-stack web application designed to help students share and explore real-wo
 
 ## 📸 Project Preview
 
-![Home Screen](https://via.placeholder.com/800x450.png?text=Interview+Portal+Screenshot) 
-*(Note: Replace this with an actual screenshot link later!)*
+<img width="1901" height="948" alt="Screenshot 2026-01-26 170131" src="https://github.com/user-attachments/assets/cef90b98-13e1-425f-83ef-f717f56306a8" />
+
 
 ## 🚀 How to Run Locally
 
