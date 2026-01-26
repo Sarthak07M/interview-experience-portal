@@ -1,0 +1,17 @@
+# Node dependencies (Frontend)
+node_modules/
+dist/
+.env
+
+# Maven/Java (Backend)
+target/
+*.class
+*.jar
+
+# IDE specific (Eclipse/VS Code)
+.settings/
+.project
+.classpath
+bin/
+.vscode/
+.DS_Store
