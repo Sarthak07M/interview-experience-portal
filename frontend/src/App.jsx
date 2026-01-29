@@ -14,7 +14,7 @@ function App() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/posts");
+      const res = await axios.get("https://interview-experience-portal-k005.onrender.com/api/posts");
       setPosts(Array.isArray(res.data) ? res.data : []);
     } catch (err) { console.error("API Error:", err); }
   };
@@ -26,19 +26,20 @@ function App() {
     return;
   }
   try {
-    // Uses the new PUT endpoint you created in Eclipse
-    await axios.put(`http://localhost:8080/api/posts/${id}/like`);
-    // CRITICAL: Refresh the data so the new like count shows up
+    // Corrected URL: No Google search, just your Render link
+    await axios.put(`https://interview-experience-portal-k005.onrender.com/api/posts/${id}/like`);
+    
+    // Refresh the feed to show the new like count
     fetchPosts(); 
   } catch (err) {
-    console.error("Like failed. Check if the backend is running on 8080.");
+    console.error("Like failed. Make sure your Render backend is 'Live'.");
   }
 };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/posts", formData);
+      await axios.post("https://interview-experience-portal-k005.onrender.com/api/posts", formData);
       setFormData({ studentName: '', companyName: '', role: '', experience: '' });
       fetchPosts();
     } catch (err) { alert("Check Eclipse!"); }
@@ -48,7 +49,7 @@ function App() {
     const password = prompt("Admin Key:");
     if (password === "admin123") {
       try {
-        await axios.delete(`http://localhost:8080/api/posts/${id}`);
+        await axios.delete(`https://interview-experience-portal-k005.onrender.com/api/posts/${id}`);
         fetchPosts();
       } catch (err) { alert("Delete failed!"); }
     }
